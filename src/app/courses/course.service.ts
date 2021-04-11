@@ -27,4 +27,8 @@ export class CourseService {
       return this.httpClient.post<Course>(this.coursesEndpoint, course);
     }
   }
+
+  deleteById(id: number): Observable<any> {
+    return this.httpClient.delete<any>(`${this.coursesEndpoint}/${id}`);
+  }
 }

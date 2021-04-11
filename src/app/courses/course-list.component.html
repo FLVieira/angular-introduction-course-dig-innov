@@ -32,7 +32,8 @@
         </app-star>
       </td>
       <td>
-        <a class="btn btn-primary" [routerLink]="['/courses/info', course.id]">Edit</a>
+        <a class="btn btn-primary mr-2" [routerLink]="['/courses/info', course.id]">Edit</a>
+        <button class="btn btn-danger" (click)="deleteById(course.id)">Delete</button>
       </td>
     </tr>
   </tbody>

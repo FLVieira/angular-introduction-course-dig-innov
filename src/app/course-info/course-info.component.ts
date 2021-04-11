@@ -15,7 +15,7 @@ export class CourseInfoComponent implements OnInit {
   ngOnInit(): void {
     const id: any = this.activatedRoute.snapshot.paramMap.get('id')
     if (id)
-      this.courseService.retrieveById(+id).subscribe({
+      this.courseService.retrieveById(Number(id)).subscribe({
         next: (res) => {
           this.course = res;
         },
