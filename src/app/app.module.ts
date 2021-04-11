@@ -3,15 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppComponent } from './app.component';
-import { Page404 } from './page404/page404.component';
-import { CourseModule } from './courses/courses.module';
 import { CoreModule } from './core/core.module';
+import { CourseModule } from './courses/courses.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Page404,
   ],
   imports: [
     BrowserModule,
@@ -24,10 +22,7 @@ import { CoreModule } from './core/core.module';
         redirectTo: 'courses',
         pathMatch: 'full',
       },
-      {
-        path: '**',
-        component: Page404
-      },
+
     ])
   ],
   providers: [],
